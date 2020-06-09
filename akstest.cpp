@@ -81,19 +81,26 @@ int main()
     cout<<"Enter the number:";
     int n;
     cin>>n;
-    if(n<=pasTriMax)
-        cout<<"\nPolynomial Expansion will be: \n";
-    expandPoly(n);      
-    cout<<"\n";
-    if (isPrime(n))
+    if(n<2)
     {
-        cout<<"All cofficient in expansion is divisible by "<<n<<" except coffiecient of x^"<<n<<" and last 1 which will be cancelled out as per algorithm. \n";
-        cout <<"Hence, Yes "<<n<<" is Prime";
+        cout<<"Enter the number equal and more than 2.This is not Prime nor Composite.";
     }
     else
     {
-        cout<<"Not all cofficient in expansion is divisible by "<<n<<". \n";
-        cout<<"So, No "<<n<<" is not Prime";
+        if(n<=pasTriMax)
+            cout<<"\nPolynomial Expansion will be: \n";
+        expandPoly(n);      
+        cout<<"\n";
+        if (isPrime(n))
+        {
+            cout<<"All cofficient in expansion is divisible by "<<n<<" except coffiecient of x^"<<n<<" and last 1 which will be cancelled out as per algorithm. \n";
+            cout <<"Hence, Yes "<<n<<" is Prime";
+        }
+        else
+        {
+            cout<<"Not all cofficient in expansion is divisible by "<<n<<". \n";
+            cout<<"So, No "<<n<<" is not Prime";
+        }
     }
     cout << endl;        
 }
