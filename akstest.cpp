@@ -81,7 +81,8 @@ int main()
     cout<<"Enter the number:";
     int n;
     cin>>n;
-    cout<<"\n Polynomial Expansion will be: \n";
+    if(n<=pasTriMax)
+        cout<<"\nPolynomial Expansion will be: \n";
     expandPoly(n);      
     cout<<"\n";
     if (isPrime(n))
