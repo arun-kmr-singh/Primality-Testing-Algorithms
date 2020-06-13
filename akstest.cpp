@@ -62,14 +62,14 @@ void expandPoly(unsigned long n)
         default:
             pascalTriangle(n);
             cout << "(x-1)^" << n << " = ";
-            cout << "x^" << n;
+            cout << "(x^" << n<<")";
             bool bVz = true;
             int nDiv2 = n / 2;
             for (unsigned long j = n - 1; j > nDiv2; j--, bVz = !bVz)
-                cout << vz[bVz] << pasTri[n - j] << "*x^" << j;
+                cout << vz[bVz] <<"("<< pasTri[n - j] << "*x^" << j<<")";
             for (unsigned long j = nDiv2; j > 1; j--, bVz = !bVz)
-                cout << vz[bVz] << pasTri[j] << "*x^" << j;
-            cout << vz[bVz] << pasTri[1] << "*x";
+                cout << vz[bVz] <<"("<<  pasTri[j] << "*x^" << j<<")";
+            cout << vz[bVz] <<"("<< pasTri[1] << "*x"<<")";
             bVz = !bVz;
             cout << vz[bVz] << pasTri[0] << endl;
             break;
@@ -104,4 +104,3 @@ int main()
     }
     cout << endl;        
 }
-
